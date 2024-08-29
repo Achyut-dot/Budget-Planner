@@ -25,8 +25,7 @@
 }
 
 .toggle-button-row mat-icon {
-  font-family: "Material Icons", sans-serif;
-  font-size: 10px;
+  font-size: 28px;
   align-content: center;
   color: #004a99;
 }
@@ -80,4 +79,10 @@
 
 .edit-col:hover {
   color: #004a99;
+}
+
+.nav {
+  text-align: center;
+  justify-content: center;
+  background-color: #2d85e3;
 }
