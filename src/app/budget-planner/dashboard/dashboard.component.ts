@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [MatIconModule, SideNavComponent, CommonModule],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent {
   //Income
@@ -25,9 +25,12 @@ export class DashboardComponent {
     { description: 'Pay Electricity Bill' },
     { description: 'Submit Monthly Report' },
     { description: 'Buy Groceries' },
-    { descripton: 'Call Insurance Company' }
+    { description: 'Call Insurance Company' },
   ];
-  constructor(public router: Router) { }
+  totalCurrentMonthIncome = 2000;
+  totalCurrentMonthExpense = 1500;
+
+  constructor(public router: Router) {}
 
   onIncome() {
     this.router.navigate(['/budget-planner/income']);
@@ -37,5 +40,9 @@ export class DashboardComponent {
   }
   onTodo() {
     this.router.navigate(['/budget-planner/todo']);
+  }
+
+  get currentMonthSavings(): number {
+    return this.totalCurrentMonthIncome - this.totalCurrentMonthExpense;
   }
 }

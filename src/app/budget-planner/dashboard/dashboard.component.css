@@ -15,9 +15,9 @@
 
 .card {
   position: relative;
-  background-color: #f9f9f9;
+  background-color: #e6f2ff;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 128, 0.1);
   padding: 20px;
   width: calc(50% - 40px);
   max-width: 400px;
@@ -26,7 +26,7 @@
 
 .card:hover {
   transform: translateY(-7px);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px rgba(0, 0, 128, 0.2);
 }
 
 .card-header {
@@ -34,12 +34,84 @@
   align-items: center;
 }
 
-.icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: #004080;
+  color: white;
+}
+
+.transaction-status mat-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  color: #00bfff;
+}
+
+.transaction-details {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #004080;
+}
+
+.transaction-details.completed {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.mat-icon {
+  font-size: 24px;
+  color: #0073e6;
+}
+
+.button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0073e6;
+  color: white;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.total-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.total-item .icon {
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.total-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #004080;
+  flex-grow: 1;
+}
+
+.total-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.total-line {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.total-details {
+  padding: 10px 0;
 }
